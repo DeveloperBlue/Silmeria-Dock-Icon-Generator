@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Silmeria-Dock-Configurator</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <div class="modal fade" role="dialog" tabindex="-1" id="icon-modal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="modal-title">Add Launcher Icon</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                <div class="modal-body">
+                    <div class="text-input clearfix"><span>Name</span><input type="text" id="modal-name" placeholder="Shorthand Name"></div>
+                    <span>Choose an application to launch</span>
+                    <div class="directory-input clearfix"><input type="text" id="modal-app-dir" placeholder="Choose a directory . . ."><button class="btn btn-primary" id="modal-app-choose" type="button">Select Application</button></div><span>Choose a base icon</span>
+                    <div class="directory-input clearfix"><input type="text" id="modal-icon0-span" placeholder="Select Icon"><button class="btn btn-primary" id="modal-icon-choose" type="button">Select Icon</button></div>
+                </div>
+                <div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal">Close</button><button class="btn btn-primary" id="modal-save" type="button">Save</button></div>
+            </div>
+        </div>
+    </div>
+    <div class="container" style="margin-top:40px">
+        <div id="dir-select-window">
+            <h5>Open Silmeria Dock</h5>
+            <div class="directory-input clearfix"><input type="text" id="choose-silmeria-dir-span" placeholder="Open Silmeria Dock directory . . ."><button class="btn btn-primary" id="choose-silmeria-dir" type="button">Choose Directory</button></div>
+            <div class="row">
+                <div class="col-md-6 col-lg-6">
+                    <div class="validation-box">
+                        <div id="notif-resources" class="notif-box"><i class="fa fa-check"></i></div><span>Found @Resources subfolder</span></div>
+                </div>
+                <div class="col-md-6 col-lg-6">
+                    <div class="validation-box">
+                        <div id="notif-icons-dir" class="notif-box active"><i class="fa fa-check"></i></div><span>Found @Resources/Icons subfolder</span></div>
+                </div>
+                <div class="col-md-6 col-lg-6">
+                    <div class="validation-box">
+                        <div id="notif-icons" class="notif-box active"><i class="fa fa-check"></i></div><span>Found @Resources/Icons.ini</span></div>
+                </div>
+                <div class="col-md-6 col-lg-6">
+                    <div class="validation-box">
+                        <div id="notif-settings" class="notif-box active"><i class="fa fa-check"></i></div><span>Found @Resources/Settings.ini</span></div>
+                </div>
+            </div>
+            <div class="alert alert-danger dir-error" role="alert" id="directory-error">
+                <h5 class="alert-heading">This is an invalid directory for Silmeria Dock</h5><span>Silmeria dock can usually be found in <em>C:\Users\USER\Documents\Rainmeter\Skins\</em></span></div>
+        </div>
+        <div id="main-window" style="display:none; margin-top:40px;">
+            <div>
+                <h5>General Configuration</h5>
+                <div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="data-input"><span>Button Size</span><input type="text" id="button-size" value="512">
+                                <div class="hover-active"></div>
+                            </div>
+                            <div class="data-input"><span>Button Icon Padding</span><input type="text" id="button-icon-padding-size" value="80">
+                                <div class="hover-active"></div>
+                            </div>
+                            <div class="data-input"><span>Button Spacing</span><input type="text" id="button-spacing" value="10">
+                                <div class="hover-active"></div>
+                            </div>
+                            <div class="data-input"><span>Initial Transparency</span><input type="text" id="initial-transparency" value="0">
+                                <div class="hover-active"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="data-input"><span>Line Color</span><input type="color" id="line-color">
+                                <div class="hover-active"></div>
+                            </div>
+                            <div class="data-input"><span>Line Thickness</span><input type="text" id="line-thickness" value="4">
+                                <div class="hover-active"></div>
+                            </div>
+                            <div class="data-input"><span>Line-Button Spacing</span><input type="text" class="line-button-spacing" value="10">
+                                <div class="hover-active"></div>
+                            </div>
+                            <div class="data-input"><span>Background Color</span><input type="color" id="background-color">
+                                <div class="hover-active"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="margin-top:40px;">
+                <h5>Launcher Icons Generator</h5>
+                <div class="icon-container">
+                    <div class="icon-item">
+                        <div class="drag_handle"><i class="fas fa-sort"></i></div><img class="base-icon" src="https://via.placeholder.com/48.png" width="48" height="48">
+                        <div><span class="name">Chrome</span><span class="dir"><i class="fa fa-terminal"></i>"C:\Users\Mike\Program Files\Google\Chrome.exe"</span></div><button class="btn btn-primary btn-edit" type="button">Edit</button><button class="btn btn-danger btn-delete"
+                            type="button"><i class="fas fa-trash"></i></button></div>
+                    <div class="icon-item">
+                        <div class="drag_handle"><i class="fas fa-sort"></i></div><img class="base-icon" src="https://via.placeholder.com/48.png" width="48" height="48">
+                        <div><span>Chrome</span><span><i class="fa fa-terminal"></i>"C:\Users\Mike\Program Files\Google\Chrome.exe"</span></div><button class="btn btn-primary btn-edit" type="button">Edit</button><button class="btn btn-danger btn-delete" type="button"><i class="fas fa-trash"></i></button></div>
+                </div>
+                <div class="launcher-base-toolbar clearfix"><button class="btn btn-primary" id="add-icon" type="button">Add Launcher Icon</button></div>
+            </div>
+            <div class="custom-control custom-switch"><input type="checkbox" id="overwrite-existing-ini" class="custom-control-input" checked=""><label class="custom-control-label" for="switch0">Overwrite Existing .ini files</label></div><button class="btn btn-success btn-block" style="margin-top:20px;" id="generate"
+                type="button">Generate</button><div style="margin-top:10px;"><a id="open-output-dir" href="#">Open Output Directory</a><a id="open-silmeria-dir" style="float:right;" href="#">Open Silmeria Directory</a></div></div>
+    
+            <div id="dock-console" style="overflow-y:scroll; margin-top:20px; margin-bottom:20px; border: 1px solid #fff; min-height:10px; max-height:200px; background-color: #1e282d;">
+                <span style="padding-left:10px"><bold>CONSOLE</bold></span>
+            </div>
+    </div>
+    <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+
+    <!-- normal script imports etc  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.9.0/Sortable.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <!-- Insert this line after script imports -->
+    <script>if (window.module) module = window.module;</script>
+
+    <!-- https://stackoverflow.com/questions/32621988/electron-jquery-is-not-defined -->
+</body>
+
+</html>

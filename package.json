@@ -1,0 +1,20 @@
+{
+  "name": "silmeria-dock-icon-generator",
+  "version": "1.0.0",
+  "description": "Smart icon-generator for the Rainmeter Dock \"Silmeria Dock\". It will automatically take your source images, resize them, calculate an average background color, and export two images. One image being the standard icon, the other being the hovered icon.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "homepage": "https://github.com/DeveloperBlue/Silmeria-Dock-Icon-Generator",
+  "author": "Michael Rooplall",
+  "license": "MIT",
+  "dependencies": {
+    "image-average-color": "^1.0.0",
+    "jimp": "^0.6.4"
+  },
+  "devDependencies": {
+    "electron": "^5.0.7"
+  }
+}

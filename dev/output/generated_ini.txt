@@ -1,0 +1,17 @@
+TotalIcons=3
+
+;IconNaN
+IconNaN=#@#Icons/undefined.png
+IconNaNOver=#@#Icons/undefined_Active.png
+IconNaNAction=["undefined"]
+
+;IconNaN
+IconNaN=#@#Icons/undefined.png
+IconNaNOver=#@#Icons/undefined_Active.png
+IconNaNAction=["undefined"]
+
+;IconNaN
+IconNaN=#@#Icons/undefined.png
+IconNaNOver=#@#Icons/undefined_Active.png
+IconNaNAction=["undefined"]
+

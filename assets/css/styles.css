@@ -1,0 +1,199 @@
+body {
+  background-color: #263238;
+  color : #fff;
+  font-family: "Roboto";
+}
+
+.directory-input, .text-input {
+  display: block;
+  border: 1px solid #007bff;
+  height: 40px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.directory-input > span, .text-input > span, .directory-input > input, .text-input > input {
+  height: 100%;
+  /*line-height: 40px;*/
+  font-size: 14px;
+  border: 0px;
+  background-color : transparent;
+  width: 100%;
+  padding-left: 10px;
+}
+
+.directory-input > .btn {
+  border-radius: 0px;
+  position: absolute;
+  right: 0;
+  float : right;
+  height: 100%;
+  font-size: 14px;
+}
+
+.text-input {
+  display: inline-grid;
+  width: 100%;
+  grid-template-columns: [title] auto [input] auto;
+}
+
+.text-input > span {
+  background-color: #007bff;
+  color: #fff;
+  float: left;
+  margin-left: 0px;
+  height: calc(100% - 1px);
+  padding-left: 12px;
+  padding-right: 12px;
+  line-height: 40px;
+}
+
+.text-input > input {
+  border: 0px;
+  height: 100%;
+  padding-left: 10px;
+  font-size: 14px;
+}
+
+.validation-box {
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.notif-box {
+  border: 1px solid #007bff;
+  display: inline-block;
+  height: 24px;
+  width: 24px;
+  font-size: 14px;
+  text-align: center;
+  margin-right: 5px;
+}
+
+.notif-box > i {
+  visibility: hidden;
+}
+
+.notif-box.active {
+  background-color: #007bff;
+}
+
+.notif-box.active > i {
+  visibility: visible;
+  color: #fff;
+}
+
+.custom-control {
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.data-input {
+  position: relative;
+  margin-top: 5px;
+}
+
+.data-input > .hover-active {
+  position: absolute;
+  height: 100%;
+  width: 4px;
+  background-color: #007bff;
+  left: -10px;
+  top: 0;
+  bottom: 0;
+  visibility: hidden;
+}
+
+.data-input:hover > .hover-active {
+  visibility: visible;
+}
+
+.data-input > span {
+  font-size: 14px;
+  margin-right: 5px;
+}
+
+input#choose-silmeria-dir-span {
+  color : #fff;
+}
+
+.data-input > input {
+  border: 1px solid #ddd;
+  font-size: 12px;
+  text-align: center !important;
+  padding: 0px !important;
+  width: 32px;
+}
+
+.icon-container {
+  border: 1px solid #007bff;
+  min-height: 10px;
+  padding: 5px;
+}
+
+.icon-item {
+  display: grid;
+  grid-template-columns: [handle] 25px [icon] 56px [info] auto [edit] 60px [delete] 42px 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #1e282d;
+}
+
+.icon-item:hover {
+  background-color: #1e282d;
+}
+
+.icon-item > div > span {
+  display: block;
+}
+
+.icon-item > div > span > i {
+  margin-right: 5px;
+  color: #888;
+}
+
+.icon-item:last-child {
+  border-bottom: 0px;
+}
+
+.icon-item > span {
+  margin-right: 10px;
+}
+
+.base-icon {
+  width: 48px;
+  height: 48px;
+  margin-right: 10px;
+}
+
+.btn-edit, .btn-delete {
+  border-radius: 0px;
+  font-size: 14px;
+}
+
+.drag_handle {
+  display: flex;
+  vertical-align: middle;
+  text-align: center;
+  margin-right: 5px;
+  color: #444;
+  width: 20px;
+}
+
+.drag_handle > i {
+  margin: auto;
+}
+
+.launcher-base-toolbar {
+  margin-top: 10px;
+}
+
+.launcher-base-toolbar > .btn {
+  border-radius: 0px;
+  float: right;
+}
+
+.dir-error {
+  margin-top: 20px;
+}
+
